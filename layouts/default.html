@@ -1,13 +1,32 @@
----
-layout: default
-title: About Me
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <!-- Add your stylesheet link here -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Site header content -->
+        <h1>{{ site.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <!-- Add more navigation links if needed -->
+            </ul>
+        </nav>
+    </header>
 
-# About Me
+    <main>
+        {{ content }} <!-- This is where your page content will be inserted -->
+    </main>
 
-Welcome to my page! Here's a little about me:
-
-- I love hiking and exploring the outdoors.
-- Reading is my favorite pastime.
-
-Thanks for visiting my website!
+    <footer>
+        <!-- Site footer content -->
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
